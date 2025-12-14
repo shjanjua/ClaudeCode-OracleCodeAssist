@@ -1,10 +1,10 @@
-# Claude Code OCA Proxy
+# 🌉 Claude Code OCA Proxy
 
 Use [Claude Code](https://claude.com/claude-code) with Oracle Code Assist models.
 
 This proxy allows you to run Claude Code CLI - Anthropic's powerful AI coding assistant - while routing all requests through Oracle Code Assist infrastructure. Get the best of both worlds: Claude Code's excellent user experience with Oracle's enterprise-grade AI models.
 
-## What This Does
+## 💡 What This Does
 
 Claude Code is an AI-powered command-line tool that helps you write code, debug issues, and understand codebases. Normally, it connects to Anthropic's Claude models. This proxy redirects those connections to use **Oracle Code Assist models** instead, giving you:
 
@@ -15,7 +15,7 @@ Claude Code is an AI-powered command-line tool that helps you write code, debug 
 
 Simply run this proxy server in the background, and Claude Code automatically uses Oracle Code Assist models.
 
-## Prerequisites
+## 📋 Prerequisites
 
 Before you begin, you need:
 
@@ -24,7 +24,7 @@ Before you begin, you need:
 - **Claude Code CLI** - [Download here](https://github.com/anthropics/claude-code)
 - **Cline CLI** (for getting Oracle credentials)
 
-## Installation
+## 📥 Installation
 
 **Step 1: Download this project**
 
@@ -46,7 +46,7 @@ source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-## Getting Your Oracle Credentials
+## 🔑 Getting Your Oracle Credentials
 
 You'll need Oracle Code Assist credentials to use this proxy. The easiest way to get them is through Cline:
 
@@ -71,7 +71,7 @@ You'll need Oracle Code Assist credentials to use this proxy. The easiest way to
 
 That's it! The `secrets.json` file contains your Oracle authentication tokens.
 
-## Running the Proxy
+## ▶️ Running the Proxy
 
 **Basic start** (if `secrets.json` is in the project folder):
 
@@ -102,7 +102,7 @@ Starting server on :8080
 
 The proxy is now running! Keep this terminal window open.
 
-## Using Claude Code with the Proxy
+## 💻 Using Claude Code with the Proxy
 
 Open a **new terminal window** and run Claude Code with this environment variable:
 
@@ -120,7 +120,7 @@ export ANTHROPIC_BASE_URL=http://localhost:8080
 
 Then you can just run `claude` normally.
 
-## Command-Line Options
+## ⚙️ Command-Line Options
 
 Customize the proxy with these options:
 
@@ -143,7 +143,7 @@ python claude_code_proxy.py \
   --log-level debug
 ```
 
-## Verifying It Works
+## ✅ Verifying It Works
 
 **Check if the proxy is running**:
 
@@ -166,7 +166,7 @@ Then ask Claude to do something simple like "Hello, can you help me write a Pyth
 
 If you see a response, it's working! That response came from Oracle Code Assist.
 
-## Troubleshooting
+## 🔧 Troubleshooting
 
 ### "FATAL: Could not perform initial load of token file"
 
@@ -223,7 +223,7 @@ python claude_code_proxy.py --log-level debug
 
 This shows detailed information about every request and response.
 
-## How It Works (Technical Details)
+## 🏗️ How It Works (Technical Details)
 
 For those interested in the technical implementation:
 
@@ -282,7 +282,7 @@ The proxy watches your credentials file and reloads it automatically when it cha
 - No need to restart the proxy server
 - Seamless credential rotation
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 ClaudeCodeOCA/
@@ -294,7 +294,7 @@ ClaudeCodeOCA/
 └── README.md                # This file
 ```
 
-## Limitations
+## ⚠️ Limitations
 
 Current limitations of this proxy:
 
@@ -304,7 +304,7 @@ Current limitations of this proxy:
 - **Token cap**: Maximum 16,384 tokens per request (configurable in code).
 - **Hardcoded endpoint**: Oracle endpoint URL is in the source code (line 29).
 
-## Contributing
+## 🤝 Contributing
 
 Contributions are welcome! To contribute:
 
@@ -315,23 +315,23 @@ Contributions are welcome! To contribute:
 5. Push to your branch (`git push origin feature/amazing-feature`)
 6. Open a Pull Request
 
-## License
+## 📄 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Acknowledgments
+## 🙏 Acknowledgments
 
 - [Anthropic](https://www.anthropic.com/) for Claude and the Claude Code CLI
 - [Oracle](https://www.oracle.com/) for Oracle Code Assist
 - [FastAPI](https://fastapi.tiangolo.com/) for the web framework
 - [httpx](https://www.python-httpx.org/) for async HTTP capabilities
 
-## Support
+## 💬 Support
 
 For issues, questions, or contributions:
 - **Issues**: [GitHub Issues](https://github.com/yourusername/ClaudeCodeOCA/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/yourusername/ClaudeCodeOCA/discussions)
 
-## Disclaimer
+## ⚠️ Disclaimer
 
 This project is not officially affiliated with, endorsed by, or supported by Anthropic or Oracle. Ensure compliance with the terms of service for both Claude API and Oracle Code Assist.
